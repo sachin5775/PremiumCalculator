@@ -43,54 +43,54 @@
 					<h2 class="title">Get Premium</h2>
 					<form action="PremiumCalculator" method="post">
 						<div class="input-group">
-							Vehicle Type:<input  type="text"
+							Vehicle Type:<input class="input--style-3" type="text"
 								placeholder="Enter Vehicle Type" name="vehicletype"
 								required="required" value="${vehicle.vehicleType}">
 						</div>
 						<div class="input-group">
 							Manufacturer:<input class="input--style-3" type="text"
 								placeholder="Enter Manufacturer" name="manufacturer"
-								required="required" value="Manufacturer: ${vehicle.manufacturer}"></i>
+								required="required" value="${vehicle.manufacturer}"></i>
 						</div>
 
 						<div class="input-group">
 							Vehicle model:<input class="input--style-3" placeholder="Enter Vehicle model"
-								name="model" required="required" value="Vehicle model: ${vehicle.vehicleModel}">
+								name="model" required="required" value="${vehicle.vehicleModel}">
 						</div>
 						<div class="input-group">
 							Engine CC:<input class="input--style-3" type="text"
 								placeholder="Enter Engine CC" name="engineCC"
-								required="required" value="Engine CC: ${vehicle.engineCC}">
+								required="required" value="${vehicle.engineCC}">
 						</div>
 						<div class="input-group">
 							Fuel Type:<input class="input--style-3" type="text"
 								placeholder="Enter Fuel Type" name="fueltype"
-								required="required" value="Fuel Type: ${vehicle.fuelType}">
+								required="required" value="${vehicle.fuelType}">
 						</div>
 						<div class="input-group">
 							Passing Year:<input class="input--style-3" type="text"
 								placeholder="Enter Passing Year" name="passingyear"
-								required="required" value="Passing Year: ${vehicle.passingYear}">
+								required="required" value="${vehicle.passingYear}">
 						</div>
 						<div class="input-group">
 							Vehicle Cost:<input class="input--style-3" type="text"
 								placeholder="Enter Vehicle Cost" name="cost" required="required"
-								value="Vehicle Cost: ${vehicle.vehicleCost}">
+								value="${vehicle.vehicleCost}">
 						</div>
 						<div class="input-group">
 							<input class="input--style-3" type="text"
 								placeholder="Enter Chassis Number" name="chassisnumber"
-								required="required" value="Chassis No: ${vehicle.chassisNo}">
+								required="required" value="${vehicle.chassisNo}">
 						</div>
 						<div class="input-group">
 							Vehicle Colour:<input class="input--style-3" type="text"
 								placeholder="Enter Vehicle Colour" name="colour"
-								required="required" value="Vehicle Color: ${vehicle.vehicleColour}">
+								required="required" value="${vehicle.vehicleColour}">
 						</div>
 						<div class="input-group">
 							City:<input class="input--style-3" type="text"
 								 name="city" required="required"
-								value="City :${vehicle.customer.city}">
+								value="${vehicle.customer.city}">
 						</div>
 						<div class="p-t-10">
 							<button class="btn btn--pill btn--green" type="submit">Calculate</button>

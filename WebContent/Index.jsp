@@ -77,7 +77,7 @@
 
 			<div class="hero hero-slider">
 				<ul class="slides">
-					<li data-bg-image="dummy/slide-1.jpg">
+					<li data-bg-image="dummy/car1.jpg">
 						<div class="container">
 							<div class="slide-content">
 								<h2 class="slide-title">Get your <strong>Life Insurance</strong></h2>
@@ -86,7 +86,7 @@
 							</div>
 						</div>
 					</li>
-					<li data-bg-image="dummy/slide-2.jpg">
+					<li data-bg-image="dummy/car2.jpg">
 						<div class="container">
 							<div class="slide-content">
 								<h2 class="slide-title">Get your <strong>Life Insurance</strong></h2>
@@ -95,7 +95,7 @@
 							</div>
 						</div>
 					</li>
-					<li data-bg-image="dummy/slide-3.jpg">
+					<li data-bg-image="dummy/car3.jpg">
 						<div class="container">
 							<div class="slide-content">
 								<h2 class="slide-title">Get your <strong>Life Insurance</strong></h2>
@@ -158,7 +158,7 @@
 						<div class="row">
 							<div class="col-md-3">
 								<div class="offer caption-top">
-									<img src="dummy/offer-tall.jpg" alt="offer 1">
+									<img src="https://image.shutterstock.com/z/stock-photo-car-auto-motor-insurance-reimbursement-vehicle-concept-530125411.jpg" alt="offer 1">
 									<div class="caption">
 										<h3 class="offer-title">Massa augue</h3>
 										<small>Conubia nostra per inceptos</small>
@@ -169,7 +169,7 @@
 								<div class="row">
 									<div class="col-md-4">
 										<div class="offer caption-bottom">
-											<img src="dummy/offer-1.jpg" alt="offer 2">
+											<img src="https://cdn.pixabay.com/photo/2016/12/30/22/07/machine-1941669_960_720.jpg" alt="offer 2">
 											<div class="caption">
 												<h3 class="offer-title">Curabitur vehicula</h3>
 												<small>Conubia nostra per inceptos</small>	
@@ -178,7 +178,7 @@
 									</div>
 									<div class="col-md-8">
 										<div class="offer caption-bottom">
-									<img src="dummy/offer-wide.jpg" alt="offer 3">
+									<img src="https://cdn.pixabay.com/photo/2014/11/20/19/16/insurance-539659_960_720.jpg" alt="offer 3">
 									<div class="caption">
 										<h3 class="offer-title">Vivamus rhoncus porttitor</h3>
 										<small>Conubia nostra per inceptos</small>
@@ -189,7 +189,7 @@
 								<div class="row">
 									<div class="col-md-4">
 										<div class="offer caption-bottom">
-											<img src="dummy/offer-2.jpg" alt="offer 2">
+											<img src="https://cdn.pixabay.com/photo/2017/01/18/23/49/insurance-1991212_960_720.jpg" alt="offer 2">
 											<div class="caption">
 												<h3 class="offer-title">Curabitur vehicula</h3>
 												<small>Conubia nostra per inceptos</small>	
@@ -198,7 +198,7 @@
 									</div>
 									<div class="col-md-4">
 										<div class="offer caption-bottom">
-											<img src="dummy/offer-3.jpg" alt="offer 2">
+											<img src="https://cdn.pixabay.com/photo/2018/09/14/16/42/shake-hand-3677534_960_720.jpg" alt="offer 2">
 											<div class="caption">
 												<h3 class="offer-title">Curabitur vehicula</h3>
 												<small>Conubia nostra per inceptos</small>	
@@ -207,7 +207,7 @@
 									</div>
 									<div class="col-md-4">
 										<div class="offer caption-bottom">
-											<img src="dummy/offer-4.jpg" alt="offer 2">
+											<img src="https://cdn.pixabay.com/photo/2017/05/07/14/50/car-crash-2292651_960_720.jpg" alt="offer 2">
 											<div class="caption">
 												<h3 class="offer-title">Curabitur vehicula</h3>
 												<small>Conubia nostra per inceptos</small>	
