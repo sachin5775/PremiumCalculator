@@ -1,10 +1,37 @@
 package com.model;
 
 public class Customer {
-	String firstName, lastName, email, state, city, addressLine,contactNumber;
+	String firstName, lastName, email, state, city, addressLine,contactNumber,userName,password;
 	Integer customerId, pinCode;
 	public Customer() {
 		super();
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public Customer(String firstName, String lastName, String email, String state, String city, String addressLine,
+			String contactNumber, String userName, String password, Integer customerId, Integer pinCode) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.state = state;
+		this.city = city;
+		this.addressLine = addressLine;
+		this.contactNumber = contactNumber;
+		this.userName = userName;
+		this.password = password;
+		this.customerId = customerId;
+		this.pinCode = pinCode;
 	}
 	public Customer(String firstName, String lastName, String email, String state, String city, String addressLine,
 			String contactNumber, Integer customerId, Integer pinCode) {
@@ -70,14 +97,15 @@ public class Customer {
 	public Integer getPinCode() {
 		return pinCode;
 	}
+	
 	public void setPinCode(Integer pinCode) {
 		this.pinCode = pinCode;
 	}
 	@Override
 	public String toString() {
 		return "Customer [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", state=" + state
-				+ ", city=" + city + ", addressLine=" + addressLine + ", contactNumber=" + contactNumber
-				+ ", customerId=" + customerId + ", pinCode=" + pinCode + "]";
+				+ ", city=" + city + ", addressLine=" + addressLine + ", contactNumber=" + contactNumber + ", userName="
+				+ userName + ", password=" + password + ", customerId=" + customerId + ", pinCode=" + pinCode + "]";
 	}
 	
 

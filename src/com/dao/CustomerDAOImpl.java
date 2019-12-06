@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.model.Customer;
-import com.model.Vehicle;
 import com.utility.DBUtility;
 
 public class CustomerDAOImpl implements CustomerDAO{
@@ -34,9 +33,6 @@ Connection con;
 				customer.setCity(rs.getString(7));
 				customer.setAddressLine(rs.getString(8));
 				customer.setPinCode(rs.getInt(9));
-				
-				
-				
 				return customer;	
 				}
 			} catch (SQLException e) {
@@ -46,6 +42,61 @@ Connection con;
 			
 			return null;
 	
+	}
+	@Override
+	public boolean registration(Customer customer) {
+		Connection con=DBUtility.getConnection();
+		try
+		{
+			String sql="INSERT INTO tbl_customer(first_name,last_name,contact_no,email,state,city,address_line,pin_code,user_name,password) values(?,?,?,?,?,?,?,?,?,?)";
+			PreparedStatement ps=con.prepareStatement(sql);
+			
+			ps.setString(1,customer.getFirstName());
+			ps.setString(2, customer.getLastName());
+			ps.setString(3, customer.getContactNumber());
+			ps.setString(4, customer.getEmail());
+			ps.setString(5, customer.getState());
+			ps.setString(6, customer.getCity());
+			ps.setString(7, customer.getAddressLine());
+			ps.setInt(8, customer.getPinCode());
+			ps.setString(9, customer.getUserName());
+			ps.setString(10, customer.getPassword());
+			int res=ps.executeUpdate();
+			if(res>=1)
+			{
+				System.out.println("Register");
+				return true;
+			}
+			
+		}
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+		return false;
+	
+	}
+	@Override
+	public boolean validate(String userName, String password) {
+		Connection con=DBUtility.getConnection();
+		try
+		{
+			String sql="SELECT * FROM tbl_customer where user_name=? and password=?";
+			
+			PreparedStatement ps=con.prepareStatement(sql);
+			ps.setString(1, userName);
+			ps.setString(2,password);
+			ResultSet rs=ps.executeQuery();
+			while(rs.next())
+			{
+				System.out.println("valid user");
+				return true;
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 }
