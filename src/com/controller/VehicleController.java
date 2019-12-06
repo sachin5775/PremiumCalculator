@@ -54,11 +54,11 @@ public class VehicleController extends HttpServlet {
 		if(vehicle!=null)
 		{
 		request.setAttribute("vehicle", vehicle);
-		request.getRequestDispatcher("next.jsp").forward(request, response);	
+		request.getRequestDispatcher("next1.jsp").forward(request, response);	
 		}
 		else
 		{
-			RequestDispatcher rd=request.getRequestDispatcher("next.jsp");
+			RequestDispatcher rd=request.getRequestDispatcher("next1.jsp");
 			out.print("requested vehicle number not found soo please enter details manually");
 			rd.include(request, response);
 		}

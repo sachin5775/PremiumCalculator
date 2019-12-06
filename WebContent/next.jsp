@@ -21,8 +21,9 @@
 			value="${vehicle.vehicleModel}"><br>
 		<br> Engine CC: <input type="text" placeholder="Enter Engine CC"
 			name="engineCC" required="required" value="${vehicle.engineCC}"><br>
-		<br> Fuel Type: <input type="text" placeholder="Enter Fuel Type"
-			name="fueltype" required="required" value="${vehicle.fuelType}"><br>
+		<br> Fuel Type: <input type="text"
+			placeholder="Enter Fuel Type" name="fueltype" required="required"
+			value="${vehicle.fuelType}"><br>
 		<br> Passing Year: <input type="text"
 			placeholder="Enter Passing Year" name="passingyear"
 			required="required" value="${vehicle.passingYear}"><br>
