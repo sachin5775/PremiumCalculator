@@ -41,7 +41,7 @@
 				<div class="card-heading"></div>
 				<div class="card-body">
 					<h2 class="title">Get Premium</h2>
-					<form action="PremiumCalculator" method="post">
+					<form action="PremiumController" method="post">
 						<div class="input-group">
 							Vehicle Type:<input class="input--style-3" type="text"
 								placeholder="Enter Vehicle Type" name="vehicletype"

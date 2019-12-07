@@ -14,27 +14,36 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class PremiumCalculator
  */
-@WebServlet("/PremiumCalculator")
-public class PremiumCalculator extends HttpServlet {
+@WebServlet("/PremiumController")
+public class PremiumController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	float depPercentage;
-
+	double idv;
+	float netPremium;
+	float Commercial;
+	float roadTax;
+	float gst;
+	float subtotal;
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public PremiumCalculator() {
+	public PremiumController() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 	public double calculateIDV(float cost, float depretation) {
-		double idv = cost - ((cost * depretation) / 100);
+		idv = cost - ((cost * depretation) / 100);
 		return idv;
 	}
 
 	public float calculatePremium(double idv, int type, float tax) {
-		float netPremium = (float) (idv * 0.021);
+		netPremium = (float) (idv * 0.026);
+		Commercial = netPremium * type / 100;
+		roadTax = netPremium * tax;
+		gst = netPremium * 18 / 100;
+		subtotal = netPremium + (netPremium * tax) + (netPremium * type / 100);
 		float premium = netPremium + (netPremium * tax) + (netPremium * type / 100) + (netPremium * 18 / 100);
 		return premium;
 	}
@@ -64,21 +73,21 @@ public class PremiumCalculator extends HttpServlet {
 		float tax=0f;
 		System.out.println("City....."+city);
 		if (city.equalsIgnoreCase("LATUR")) {
-			tax = 0.8f;
+			tax = 0.2f;
 		} 
 		else if (city.equalsIgnoreCase("pune")) {
-			tax = 0.6f;
+			tax = 0.3f;
 		} 
 		else if (city.equalsIgnoreCase("Hydrabad")) {
-			tax = 0.9f;
-		} else if (city.equalsIgnoreCase("Aurangabad")) {
 			tax = 0.5f;
+		} else if (city.equalsIgnoreCase("Aurangabad")) {
+			tax = 0.3f;
 		} else if (city.equalsIgnoreCase("LATUR")) {
-			tax = 1.0f;
+			tax = 0.2f;
 		} else if (city=="Jalgaon") {
-			tax = 0.75f;
+			tax = 0.5f;
 		} else if (city.equalsIgnoreCase("Banglore")) {
-			tax = 1.2f;
+			tax = 0.7f;
 		}
 		System.out.println("Tax..."+tax);
 		return tax;
@@ -104,31 +113,30 @@ public class PremiumCalculator extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
 		int passingYear = Integer.parseInt(request.getParameter("passingyear"));
 		Float cost = Float.parseFloat(request.getParameter("cost"));
-		System.out.println(cost);
 		String city = request.getParameter("city");
 		String Vtype = request.getParameter("vehicletype");
 		LocalDate currentDate = LocalDate.now();
 		int currentYear = currentDate.getYear();
 		int dep = currentYear - passingYear;
-		out.print("Dep" + dep);
 		double idv = calculateIDV(cost, depTodepPercentageConversion(dep));
-		out.println("IDV" + idv);
-		//System.out.println(idv);
 		int type = 0;
 		if (Vtype.equalsIgnoreCase("commercial")) {
 			type = 3;
 		}
-		out.print("\ncity" + city);
-		float tax = cityToTaxConversion(city);
-		out.print("\ntax" + tax);
-		float premium = calculatePremium(idv, type, cityToTaxConversion(city));
+		double premium = calculatePremium(idv, type, cityToTaxConversion(city));
 
-		 System.out.println("premium="+premium); 
-		 out.print("Premium"+premium);
+		if(idv!= 0) {
+			request.setAttribute("idv", idv);
+			request.setAttribute("premium", premium);
+			request.setAttribute("netPremium", netPremium);
+			request.setAttribute("Commercial", Commercial);
+			request.setAttribute("roadTax", roadTax);
+			request.setAttribute("gst", gst);
+			request.setAttribute("subtotal", subtotal);
+			request.getRequestDispatcher("Calculation.jsp").forward(request, response);;
+		}
 
 	}
 

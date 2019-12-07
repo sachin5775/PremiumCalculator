@@ -49,7 +49,6 @@ public class VehicleController extends HttpServlet {
 		PrintWriter out=response.getWriter();
 		
 		request.setAttribute("vehicleNo", vehicleNo);
-		/* Vehicle vehicle=vehicleDAO.getVehicleByVehicleNumber("MH12QW4052"); */
 		Vehicle vehicle=vehicleDAO.getVehicleByVehicleNumber(vehicleNo);
 		if(vehicle!=null)
 		{

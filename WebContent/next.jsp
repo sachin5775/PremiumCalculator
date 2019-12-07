@@ -10,7 +10,6 @@
 </head>
 <body>
 	<form action="PremiumCalculator" method="post">
-
 		Vehicle Type: <input type="text" placeholder="Enter Vehicle Type"
 			name="vehicletype" required="required" value="${vehicle.vehicleType}"><br>
 		<br> Manufacturer: <input type="text"
