@@ -33,6 +33,7 @@ Connection con;
 				customer.setCity(rs.getString(7));
 				customer.setAddressLine(rs.getString(8));
 				customer.setPinCode(rs.getInt(9));
+				
 				return customer;	
 				}
 			} catch (SQLException e) {
@@ -50,7 +51,6 @@ Connection con;
 		{
 			String sql="INSERT INTO tbl_customer(first_name,last_name,contact_no,email,state,city,address_line,pin_code,user_name,password) values(?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement ps=con.prepareStatement(sql);
-			
 			ps.setString(1,customer.getFirstName());
 			ps.setString(2, customer.getLastName());
 			ps.setString(3, customer.getContactNumber());

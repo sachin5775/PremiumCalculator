@@ -40,21 +40,50 @@
 			<div class="card card-3">
 				<div class="card-heading"></div>
 				<div class="card-body">
-					<h2 class="title">Login</h2>
-					<form action="CustomerController" method="post">
-						<div class="input-group">
+					<h2 class="title">Customer Registration</h2>
+					<div class="input-group">
+						<form action="CustomerController" method="">
 							<input class="input--style-3" type="text"
-								placeholder="Enter UserName" name="username"
-								required="required" >
-						</div>
-						<div class="input-group">
-							<input class="input--style-3" type="password"
-								placeholder="Enter Password" name="password"
-								required="required" >
-						</div>
-						<div class="p-t-10">
-							<button class="btn btn--pill btn--green" type="submit">Sign In</button>
-						</div>
+								placeholder="Enter First Name" name="first_name"
+								required="required">
+					</div>
+					<div class="input-group">
+						<input class="input--style-3" type="text"
+							placeholder="Enter last_name" name="last_name" required="required">
+					</div>
+					<div class="input-group">
+						<input class="input--style-3" type="text"
+							placeholder="Enter contact_no" name="contact_no" required="required">
+					</div>
+					<div class="input-group">
+						<input class="input--style-3" type="text"
+							placeholder="Enter email" name="email" required="required">
+					</div>
+					<div class="input-group">
+						<input class="input--style-3" type="text"
+							placeholder="Enter state" name="state" required="required">
+					</div>
+					<div class="input-group">
+						<input class="input--style-3" type="text"
+							placeholder="Enter city" name="city" required="required">
+					</div>
+					<div class="input-group">
+						<input class="input--style-3" type="text"
+							placeholder="Enter pin_code" name="pin_code" required="required">
+					</div>
+					<div class="input-group">
+						<input class="input--style-3" type="text"
+							placeholder="Enter UserName" name="username" required="required">
+					</div>
+					<div class="input-group">
+						<input class="input--style-3" type="password"
+							placeholder="Enter Password" name="vehicletype"
+							required="required">
+					</div>
+					<div class="p-t-10">
+						<button class="btn btn--pill btn--green" type="submit">Sign
+							Up</button>
+					</div>
 					</form>
 				</div>
 			</div>

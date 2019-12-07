@@ -48,7 +48,6 @@ public class CustomerController extends HttpServlet {
 			customer.setPinCode(Integer.parseInt(request.getParameter("pin_code")));
 			customer.setUserName(request.getParameter("username"));
 			customer.setPassword(request.getParameter("password"));
-			
 			boolean res=customerDAO.registration(customer);
 			if(res==true)
 			{
@@ -58,7 +57,7 @@ public class CustomerController extends HttpServlet {
 			}
 			else
 			{
-				RequestDispatcher rs=request.getRequestDispatcher("Home.jsp");
+				RequestDispatcher rs=request.getRequestDispatcher("Error.jsp");
 				rs.forward(request, response);
 				return;
 			}
@@ -84,7 +83,7 @@ public class CustomerController extends HttpServlet {
 			System.out.println(res);
 			if(res==true)
 			{
-				RequestDispatcher rs=request.getRequestDispatcher("Home.jsp");
+				RequestDispatcher rs=request.getRequestDispatcher("Index.jsp");
 				rs.forward(request, response);
 				HttpSession session_id=request.getSession();
 				session_id.setAttribute("username", uname);
