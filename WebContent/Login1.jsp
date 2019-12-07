@@ -33,7 +33,6 @@
 <!-- Main CSS-->
 <link href="css/main.css" rel="stylesheet" media="all">
 </head>
-
 <body>
 	<div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
 		<div class="wrapper wrapper--w780">
