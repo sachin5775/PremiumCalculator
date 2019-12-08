@@ -78,16 +78,19 @@ public class CustomerController extends HttpServlet {
 		{
 			String uname=request.getParameter("username");
 			String pass=request.getParameter("password");
-			boolean res=customerDAO.validate(uname,pass);
+			int customerId=customerDAO.validate(uname,pass);
 			
-			System.out.println(res);
-			if(res==true)
+			if(customerId!=0)
 			{
-				RequestDispatcher rs=request.getRequestDispatcher("Index.jsp");
+				System.out.println("this is valid user");
+				request.setAttribute("customerId",String.valueOf(customerId));
+				RequestDispatcher rs=request.getRequestDispatcher("PolicyController");
 				rs.forward(request, response);
-				HttpSession session_id=request.getSession();
-				session_id.setAttribute("username", uname);
-				return;
+				/*
+				 * HttpSession session_id=request.getSession();
+				 * session_id.setAttribute("username", uname);
+				 */
+				
 			}
 			else
 			{

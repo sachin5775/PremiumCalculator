@@ -34,7 +34,7 @@
 						<a href="index.html" id="branding">
 							<img src="images/logo.png" alt="Company Name" class="logo">
 							<div class="logo-text">
-								<h1 class="site-title">Company Name</h1>
+								<h1 class="site-title">Allianz Technology</h1>
 								<small class="description">Taline goes here</small>
 							</div>
 						</a> <!-- #branding -->
@@ -42,7 +42,8 @@
 						<div class="right-section pull-right">
 							<a href="#" class="phone"><img src="images/icon-phone.png" class="icon">+1 823 424 9134</a>
 					
-							<form action="VehicleController" class="search-form" method="post">
+							<form action="VehicleCont
+							roller" class="search-form" method="post">
 								<input type="text" placeholder="Enter VehicleNumber" name="vehiclenumber" required="required">
 								<button type="submit"><img src="images/icon-search.png" alt=""></button>
 							</form>
@@ -56,7 +57,8 @@
 						<div class="main-navigation">
 							<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
 							<ul class="menu">
-								<li class="menu-item"><a href="about.html">About us</a></li>
+								<li class="menu-item"><a href="about.jsp
+								">About us</a></li>
 								<li class="menu-item"><a href="insurance.html">Insurance plans</a></li>
 								<li class="menu-item"><a href="resource.html">Resources</a></li>
 								<li class="menu-item"><a href="contact.html">Contact</a></li>
@@ -64,8 +66,8 @@
 						</div> <!-- .main-navigation -->
 						
 						<div class="social-links">
-							<a href="Login.jsp">Sign In<i class="fa fa-facebook"></i></a>
-							<a href="Register.jsp">Sign Up<i class="fa fa-twitter"></i></a>
+							<a href="Login.jsp">Login<i class="fa fa-facebook"></i></a>
+							<a href="Register.jsp">Register<i class="fa fa-twitter"></i></a>
 							
 						</div>
 						
@@ -82,7 +84,7 @@
 							<div class="slide-content">
 								<h2 class="slide-title">Get your <strong>Life Insurance</strong></h2>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quos cumque odio soluta harum error sequi laudantium, est nam perspiciatis eveniet maxime, esse possimus architecto sunt natus reprehenderit debitis fugit.</p>
-								<a href="#" class="button">Get a quote</a>
+								<a href="Home.jsp" class="button">Get a quote</a>
 							</div>
 						</div>
 					</li>
@@ -268,24 +270,6 @@
 						</div>
 					</div> <!-- .container -->
 				</div> <!-- .fullwidth-block -->
-
-				<div class="fullwidth-block">
-					<div class="container">
-						<h2 class="section-title">Our partners</h2>
-
-						<div class="partners">
-							<a href="#"><img src="dummy/money-logo.png" alt=""></a>
-							<a href="#"><img src="dummy/nyt-logo.png" alt=""></a>
-							<a href="#"><img src="dummy/forbes-logo.png" alt=""></a>
-							<a href="#"><img src="dummy/wsj-logo.png" alt=""></a>
-							<a href="#"><img src="dummy/bbs-logo.png" alt=""></a>
-						</div> <!-- .partners -->
-					</div> <!-- .container -->
-				</div> <!-- .fullwidth-block -->
-
-				<div class="fullwidth-block">
-					<div class="map"></div>
-				</div>
 			</main>
 
 			<div class="site-footer">

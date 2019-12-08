@@ -77,8 +77,9 @@ Connection con;
 	
 	}
 	@Override
-	public boolean validate(String userName, String password) {
+	public int validate(String userName, String password) {
 		Connection con=DBUtility.getConnection();
+		Customer customer=new Customer();
 		try
 		{
 			String sql="SELECT * FROM tbl_customer where user_name=? and password=?";
@@ -90,13 +91,14 @@ Connection con;
 			while(rs.next())
 			{
 				System.out.println("valid user");
-				return true;
+				int customerId=rs.getInt(1);
+				return customerId;
 			}
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 		}
-		return false;
+		return 0;
 	}
 
 }
